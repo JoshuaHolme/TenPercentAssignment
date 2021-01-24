@@ -19,7 +19,7 @@ struct TopicsView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 12) {
                 ForEach(sortTopics(unsortedTopics: fetchedTopics.topics), id: \.uuid) {topic in
-                    NavigationLink(destination: TopicDetailView(topic: topic)) {
+                    NavigationLink(destination: TopicDetailView(selectedTopic: topic)) {
                         TopicCell(topic: topic)
                             .cornerRadius(5)
                             .overlay(RoundedRectangle(cornerRadius: 5)

@@ -8,17 +8,32 @@
 import SwiftUI
 
 struct TopicDetailView: View {
-    let topic: Topic
+    let selectedTopic: Topic
     @ObservedObject var fetchedTopics = FetchTopics()
     @ObservedObject var fetchedMeditations = FetchMeditations()
     
     var body: some View {
-        VStack{
-            Text("\(topic.description ?? "Description")")
-            MeditationCell()
-            Spacer()
+        ScrollView {
+            VStack{
+                Text("\(selectedTopic.description ?? "Description")")
+                ForEach(findSubtopics(topics: fetchedTopics.topics.topics!), id: \.uuid) {subtopic in
+                    SubtopicView(subtopic: subtopic)
+                }
+                Spacer()
+            }
         }
-        .navigationTitle(topic.title ?? "Title")
+        .navigationTitle(selectedTopic.title ?? "Title")
+    }
+    
+    func findSubtopics(topics: [Topic]) -> [Topic] {
+        var subtopics: [Topic] = []
+        
+        for topic in topics {
+            if topic.parentUUID == selectedTopic.uuid {
+                subtopics.append(topic)
+            }
+        }
+        return subtopics
     }
 }
 

@@ -13,7 +13,7 @@ struct Meditation: Codable {
     let teacherName: String?
     let imageName: String?
     let imageURL: String?
-    let playCount: String?
+    let playCount: Int?
     
     private enum CodingKeys: String, CodingKey {
         case uuid

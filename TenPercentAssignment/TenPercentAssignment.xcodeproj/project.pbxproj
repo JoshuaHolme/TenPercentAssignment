@@ -10,6 +10,7 @@
 		690CC21F25BD1D3500FACC37 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC21E25BD1D3500FACC37 /* Meditation.swift */; };
 		690CC22425BD1EA000FACC37 /* FetchMeditations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC22325BD1EA000FACC37 /* FetchMeditations.swift */; };
 		690CC22925BD1F0C00FACC37 /* Meditations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC22825BD1F0C00FACC37 /* Meditations.swift */; };
+		690CC22E25BD215100FACC37 /* SubtopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC22D25BD215100FACC37 /* SubtopicView.swift */; };
 		69E0F04325BD11A3004F25DD /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0F04225BD11A3004F25DD /* TopicDetailView.swift */; };
 		69E0F04825BD16EF004F25DD /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0F04725BD16EF004F25DD /* MeditationCell.swift */; };
 		69E0F05625BD1B5B004F25DD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0F05525BD1B5B004F25DD /* RemoteImage.swift */; };
@@ -48,6 +49,7 @@
 		690CC21E25BD1D3500FACC37 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		690CC22325BD1EA000FACC37 /* FetchMeditations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMeditations.swift; sourceTree = "<group>"; };
 		690CC22825BD1F0C00FACC37 /* Meditations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditations.swift; sourceTree = "<group>"; };
+		690CC22D25BD215100FACC37 /* SubtopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicView.swift; sourceTree = "<group>"; };
 		69E0F04225BD11A3004F25DD /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
 		69E0F04725BD16EF004F25DD /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
 		69E0F05525BD1B5B004F25DD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				69F8BB7125BCD5D60038E09F /* TopicCell.swift */,
 				69E0F04225BD11A3004F25DD /* TopicDetailView.swift */,
 				69E0F04725BD16EF004F25DD /* MeditationCell.swift */,
+				690CC22D25BD215100FACC37 /* SubtopicView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				69F8BB5C25BCCE790038E09F /* Topics.swift in Sources */,
 				69E0F05625BD1B5B004F25DD /* RemoteImage.swift in Sources */,
 				69F8BB4E25BCC45B0038E09F /* Topic.swift in Sources */,
+				690CC22E25BD215100FACC37 /* SubtopicView.swift in Sources */,
 				690CC22925BD1F0C00FACC37 /* Meditations.swift in Sources */,
 				69F8BB6C25BCD21C0038E09F /* FetchTopics.swift in Sources */,
 				69F8BB7725BCDBC90038E09F /* HexColor.swift in Sources */,

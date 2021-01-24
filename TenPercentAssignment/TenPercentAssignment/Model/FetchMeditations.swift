@@ -23,7 +23,7 @@ class FetchMeditations: ObservableObject {
                     print("No data")
                 }
             } catch {
-                print("Error")
+                print("Error \(error)")
             }
         }.resume()
     }

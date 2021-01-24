@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct MeditationCell: View {
+    let meditation: Meditation
     var body: some View {
         HStack {
-            RemoteImage(url: "https://production.assets.changecollective.com/uploads/meditation/background_image/2/Adj_5-60_Teal_B.jpg")
+            RemoteImage(url: meditation.imageURL!)
                 .frame(width: 75, height: 75, alignment: .center)
                 .cornerRadius(15)
-            VStack(alignment: .leading) {
-                Text("Top Text")
+            VStack(alignment: .leading, spacing: 8) {
+                Text(meditation.title ?? "Meditation Title")
                     .fontWeight(.bold)
-                Text("Bottom Text")
+                Text(meditation.teacherName ?? "Teacher Name")
                     .foregroundColor(.gray)
             }
             Spacer()
@@ -24,8 +25,8 @@ struct MeditationCell: View {
     }
 }
 
-struct MeditationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        MeditationCell()
-    }
-}
+//struct MeditationCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MeditationCell()
+//    }
+//}
