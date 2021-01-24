@@ -8,35 +8,40 @@
 import SwiftUI
 
 struct TopicsView: View {
+    
+    @ObservedObject var fetchedTopics = FetchTopics()
+    
     var body: some View {
-        Button(action: {
-            fetchTopics()
-        }, label: {
-            /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-        })
-        .padding()
+        List {
+            ForEach(sortTopics(unsortedTopics: fetchedTopics.topics), id: \.uuid) {topic in
+                TopicCell(topic: topic)
+            }
+        }
     }
     
-    func fetchTopics() {
-        guard let gitUrl = URL(string: "https://tenpercent-interview-project.s3.amazonaws.com/topics.json") else { return }
-           URLSession.shared.dataTask(with: gitUrl) { (data, response, error) in
-                    guard let data = data else { return }
-                    do {
-                        let decoder = JSONDecoder()
-                        let jsondata = try decoder.decode(Topics.self, from: data)
-                        let fetchedTopics = jsondata.topics
-                        for i in 0 ... fetchedTopics!.count - 1 {
-                            print(fetchedTopics![i])
-                        }
-                    } catch let error {
-                        print("Error", error)
-                 }
-           }.resume()
+    private func sortTopics(unsortedTopics: Topics) -> [Topic] {
+        var relevantTopics: [Topic] = []
+        var debugInt = 0
+        
+        for topic in unsortedTopics.topics! {
+            if topic.parentUUID != nil {
+                print("WE FOUND A CHILD INT \(debugInt)")
+            }
+            if topic.featured == true || topic.parentUUID == nil {
+                relevantTopics.append(topic)
+                print("\(topic.uuid) INT \(debugInt)")
+                print("\(topic.parentUUID) \(debugInt)")
+            }
+            print("\n\n")
+            debugInt+=1
+        }
+        
+        return unsortedTopics.topics!.sorted(by: {$0.position! < $1.position!})
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        TopicsView()
-    }
-}
+//struct TopicsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TopicsView()
+//    }
+//}
