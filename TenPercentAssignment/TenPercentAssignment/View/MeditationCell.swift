@@ -25,8 +25,9 @@ struct MeditationCell: View {
     }
 }
 
-//struct MeditationCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MeditationCell()
-//    }
-//}
+struct MeditationCell_Previews: PreviewProvider {
+    static var previews: some View {
+        MeditationCell(meditation: Meditation(uuid: UUID(), title: "Mindfulness Meditation", teacherName: "Joseph Goldstein", imageURL: "https://production.assets.changecollective.com/uploads/meditation/image/2/topicTile_begin.png", playCount: 844266))
+            .previewLayout(PreviewLayout.fixed(width: 600, height: 100))
+    }
+}

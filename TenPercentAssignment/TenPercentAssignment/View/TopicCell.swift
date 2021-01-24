@@ -15,7 +15,7 @@ struct TopicCell: View {
         HStack {
             Rectangle()
                 .frame(minWidth: 6, maxWidth: 12, maxHeight: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .foregroundColor(Color(UIColor(hex: topic.color ?? "#00000000") ?? UIColor.black))
+                .foregroundColor(Color(UIColor(hex: topic.color ?? "#000000") ?? UIColor.black))
             VStack (alignment: .leading, spacing: 8){
                 Text(topic.title ?? "Featured")
                     .font(.title)
@@ -52,5 +52,6 @@ struct TopicCell: View {
 struct TopicCell_Previews: PreviewProvider {
     static var previews: some View {
         TopicCell(topic: Topic(uuid: UUID(), title: "New & Noteworthy", position: 1, parentUUID: UUID(), meditations: [UUID()], featured: true, color: "#CCE5CE", description: "Keep your meditation fresh and inspired with fresh new content and editor's picks."))
+            .previewLayout(PreviewLayout.fixed(width: 600, height: 100))
     }
 }

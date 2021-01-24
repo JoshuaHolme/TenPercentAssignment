@@ -11,6 +11,7 @@ struct TopicsView: View {
     
     @ObservedObject var fetchedTopics = FetchTopics()
     
+    // Limit the grid to one column
     let columns = [
         GridItem()
     ]
@@ -45,8 +46,8 @@ struct TopicsView: View {
     }
 }
 
-//struct TopicsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopicsView()
-//    }
-//}
+struct TopicsView_Previews: PreviewProvider {
+    static var previews: some View {
+        TopicsView()
+    }
+}

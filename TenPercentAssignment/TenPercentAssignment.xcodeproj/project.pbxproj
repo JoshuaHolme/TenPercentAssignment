@@ -98,6 +98,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		690435F025BDE6AB009E7905 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				69F8BB6B25BCD21C0038E09F /* FetchTopics.swift */,
+				690CC22325BD1EA000FACC37 /* FetchMeditations.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		690435F125BDE6D3009E7905 /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69E0F05525BD1B5B004F25DD /* RemoteImage.swift */,
+				69F8BB7625BCDBC90038E09F /* HexColor.swift */,
+			);
+			path = "Helpers and Extensions";
+			sourceTree = "<group>";
+		};
 		69F8BB1225BCC3B30038E09F = {
 			isa = PBXGroup;
 			children = (
@@ -122,14 +140,14 @@
 			isa = PBXGroup;
 			children = (
 				69F8BB4C25BCC4250038E09F /* Model */,
-				69F8BB1E25BCC3B30038E09F /* TenPercentAssignmentApp.swift */,
 				69F8BB7025BCD5C10038E09F /* View */,
+				690435F025BDE6AB009E7905 /* Controller */,
+				690435F125BDE6D3009E7905 /* Helpers and Extensions */,
+				69F8BB6625BCD1310038E09F /* ContentView.swift */,
+				69F8BB1E25BCC3B30038E09F /* TenPercentAssignmentApp.swift */,
 				69F8BB2225BCC3B30038E09F /* Assets.xcassets */,
 				69F8BB2725BCC3B30038E09F /* Info.plist */,
 				69F8BB2425BCC3B30038E09F /* Preview Content */,
-				69F8BB6625BCD1310038E09F /* ContentView.swift */,
-				69E0F05525BD1B5B004F25DD /* RemoteImage.swift */,
-				69F8BB7625BCDBC90038E09F /* HexColor.swift */,
 			);
 			path = TenPercentAssignment;
 			sourceTree = "<group>";
@@ -165,8 +183,6 @@
 			children = (
 				69F8BB4D25BCC45B0038E09F /* Topic.swift */,
 				69F8BB5B25BCCE790038E09F /* Topics.swift */,
-				69F8BB6B25BCD21C0038E09F /* FetchTopics.swift */,
-				690CC22325BD1EA000FACC37 /* FetchMeditations.swift */,
 				690CC21E25BD1D3500FACC37 /* Meditation.swift */,
 				690CC22825BD1F0C00FACC37 /* Meditations.swift */,
 			);

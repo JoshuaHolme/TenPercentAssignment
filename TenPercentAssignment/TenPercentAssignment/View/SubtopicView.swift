@@ -39,9 +39,3 @@ struct SubtopicView: View {
         return relevantMeditations.sorted(by: {$0.playCount! > $1.playCount!})
     }
 }
-
-//struct SubtopicView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SubtopicView()
-//    }
-//}

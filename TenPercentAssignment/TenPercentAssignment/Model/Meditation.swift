@@ -11,7 +11,6 @@ struct Meditation: Codable {
     let uuid: UUID?
     let title: String?
     let teacherName: String?
-    let imageName: String?
     let imageURL: String?
     let playCount: Int?
     
@@ -19,7 +18,6 @@ struct Meditation: Codable {
         case uuid
         case title
         case teacherName = "teacher_name"
-        case imageName = "image_name"
         case imageURL = "image_url"
         case playCount = "play_count"
     }

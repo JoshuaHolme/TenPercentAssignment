@@ -39,9 +39,3 @@ struct TopicDetailView: View {
         return subtopics
     }
 }
-
-//struct TopicDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopicDetailView()
-//    }
-//}
