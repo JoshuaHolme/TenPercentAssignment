@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690CC21F25BD1D3500FACC37 /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC21E25BD1D3500FACC37 /* Meditation.swift */; };
+		690CC22425BD1EA000FACC37 /* FetchMeditations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC22325BD1EA000FACC37 /* FetchMeditations.swift */; };
+		690CC22925BD1F0C00FACC37 /* Meditations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC22825BD1F0C00FACC37 /* Meditations.swift */; };
+		69E0F04325BD11A3004F25DD /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0F04225BD11A3004F25DD /* TopicDetailView.swift */; };
+		69E0F04825BD16EF004F25DD /* MeditationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0F04725BD16EF004F25DD /* MeditationCell.swift */; };
+		69E0F05625BD1B5B004F25DD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0F05525BD1B5B004F25DD /* RemoteImage.swift */; };
 		69F8BB1F25BCC3B30038E09F /* TenPercentAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8BB1E25BCC3B30038E09F /* TenPercentAssignmentApp.swift */; };
 		69F8BB2125BCC3B30038E09F /* TopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F8BB2025BCC3B30038E09F /* TopicsView.swift */; };
 		69F8BB2325BCC3B30038E09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69F8BB2225BCC3B30038E09F /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		690CC21E25BD1D3500FACC37 /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		690CC22325BD1EA000FACC37 /* FetchMeditations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMeditations.swift; sourceTree = "<group>"; };
+		690CC22825BD1F0C00FACC37 /* Meditations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditations.swift; sourceTree = "<group>"; };
+		69E0F04225BD11A3004F25DD /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
+		69E0F04725BD16EF004F25DD /* MeditationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCell.swift; sourceTree = "<group>"; };
+		69E0F05525BD1B5B004F25DD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		69F8BB1B25BCC3B30038E09F /* TenPercentAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenPercentAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F8BB1E25BCC3B30038E09F /* TenPercentAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenPercentAssignmentApp.swift; sourceTree = "<group>"; };
 		69F8BB2025BCC3B30038E09F /* TopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsView.swift; sourceTree = "<group>"; };
@@ -114,6 +126,7 @@
 				69F8BB2725BCC3B30038E09F /* Info.plist */,
 				69F8BB2425BCC3B30038E09F /* Preview Content */,
 				69F8BB6625BCD1310038E09F /* ContentView.swift */,
+				69E0F05525BD1B5B004F25DD /* RemoteImage.swift */,
 				69F8BB7625BCDBC90038E09F /* HexColor.swift */,
 			);
 			path = TenPercentAssignment;
@@ -151,6 +164,9 @@
 				69F8BB4D25BCC45B0038E09F /* Topic.swift */,
 				69F8BB5B25BCCE790038E09F /* Topics.swift */,
 				69F8BB6B25BCD21C0038E09F /* FetchTopics.swift */,
+				690CC22325BD1EA000FACC37 /* FetchMeditations.swift */,
+				690CC21E25BD1D3500FACC37 /* Meditation.swift */,
+				690CC22825BD1F0C00FACC37 /* Meditations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +176,8 @@
 			children = (
 				69F8BB2025BCC3B30038E09F /* TopicsView.swift */,
 				69F8BB7125BCD5D60038E09F /* TopicCell.swift */,
+				69E0F04225BD11A3004F25DD /* TopicDetailView.swift */,
+				69E0F04725BD16EF004F25DD /* MeditationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,14 +311,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E0F04325BD11A3004F25DD /* TopicDetailView.swift in Sources */,
 				69F8BB2125BCC3B30038E09F /* TopicsView.swift in Sources */,
 				69F8BB6725BCD1310038E09F /* ContentView.swift in Sources */,
+				690CC22425BD1EA000FACC37 /* FetchMeditations.swift in Sources */,
 				69F8BB5C25BCCE790038E09F /* Topics.swift in Sources */,
+				69E0F05625BD1B5B004F25DD /* RemoteImage.swift in Sources */,
 				69F8BB4E25BCC45B0038E09F /* Topic.swift in Sources */,
+				690CC22925BD1F0C00FACC37 /* Meditations.swift in Sources */,
 				69F8BB6C25BCD21C0038E09F /* FetchTopics.swift in Sources */,
 				69F8BB7725BCDBC90038E09F /* HexColor.swift in Sources */,
 				69F8BB7225BCD5D60038E09F /* TopicCell.swift in Sources */,
+				690CC21F25BD1D3500FACC37 /* Meditation.swift in Sources */,
 				69F8BB1F25BCC3B30038E09F /* TenPercentAssignmentApp.swift in Sources */,
+				69E0F04825BD16EF004F25DD /* MeditationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

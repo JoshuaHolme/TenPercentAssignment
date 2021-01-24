@@ -11,29 +11,34 @@ struct TopicsView: View {
     
     @ObservedObject var fetchedTopics = FetchTopics()
     
+    let columns = [
+        GridItem()
+    ]
+    
     var body: some View {
-        List {
-            ForEach(sortTopics(unsortedTopics: fetchedTopics.topics), id: \.uuid) {topic in
-                TopicCell(topic: topic)
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 12) {
+                ForEach(sortTopics(unsortedTopics: fetchedTopics.topics), id: \.uuid) {topic in
+                    NavigationLink(destination: TopicDetailView(topic: topic)) {
+                        TopicCell(topic: topic)
+                            .cornerRadius(5)
+                            .overlay(RoundedRectangle(cornerRadius: 5)
+                                        .stroke(Color.gray, lineWidth: 2))
+                    }
+                }
             }
+            .padding()
         }
+        .navigationTitle("Topics")
     }
     
     private func sortTopics(unsortedTopics: Topics) -> [Topic] {
         var relevantTopics: [Topic] = []
-        var debugInt = 0
         
         for topic in unsortedTopics.topics! {
-            if topic.parentUUID != nil {
-                print("WE FOUND A CHILD INT \(debugInt)")
-            }
             if topic.featured == true || topic.parentUUID == nil {
                 relevantTopics.append(topic)
-                print("\(topic.uuid) INT \(debugInt)")
-                print("\(topic.parentUUID) \(debugInt)")
             }
-            print("\n\n")
-            debugInt+=1
         }
         
         return relevantTopics.sorted(by: {$0.position! < $1.position!})

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TopicCell: View {
+    @ObservedObject var fetchedTopics = FetchTopics()
+    
     let topic: Topic
     var body: some View {
         HStack {
@@ -17,17 +19,27 @@ struct TopicCell: View {
             VStack (alignment: .leading, spacing: 8){
                 Text(topic.title ?? "Featured")
                     .font(.title)
+                    .foregroundColor(.black)
                     .fontWeight(.bold)
                 Text(meditationCount())
                     .font(.callout)
                     .foregroundColor(.gray)
             }
+            .padding(.bottom, 24)
+            .padding(.top, 24)
             Spacer()
         }
     }
     
     func meditationCount() -> String {
-        let numMeditation = topic.meditations?.count ?? 0
+        var numMeditation = topic.meditations?.count ?? 0
+        
+        for fetchedTopic in fetchedTopics.topics.topics! {
+            if fetchedTopic.parentUUID == topic.uuid {
+                numMeditation += fetchedTopic.meditations?.count ?? 0
+            }
+        }
+        
         if numMeditation == 1 {
             return "\(numMeditation) Meditation"
         }
