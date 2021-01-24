@@ -14,13 +14,14 @@ struct TopicDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack{
+            VStack (spacing: 12) {
                 Text("\(selectedTopic.description ?? "Description")")
                 ForEach(findSubtopics(topics: fetchedTopics.topics.topics!), id: \.uuid) {subtopic in
                     SubtopicView(subtopic: subtopic)
                 }
                 Spacer()
             }
+            .padding()
         }
         .navigationTitle(selectedTopic.title ?? "Title")
     }
@@ -33,6 +34,7 @@ struct TopicDetailView: View {
                 subtopics.append(topic)
             }
         }
+        subtopics.append(Topic(uuid: selectedTopic.uuid, title: "Meditations", position: selectedTopic.position, parentUUID: selectedTopic.parentUUID, meditations: selectedTopic.meditations, featured: selectedTopic.featured, color: selectedTopic.color, description: selectedTopic.description))
         return subtopics
     }
 }

@@ -27,7 +27,6 @@ struct SubtopicView: View {
                 }
             }
         }
-        .padding()
     }
     
     func findMetitations(meditations: [Meditation]) -> [Meditation]{
@@ -37,7 +36,7 @@ struct SubtopicView: View {
                 relevantMeditations.append(meditation)
             }
         }
-        return relevantMeditations
+        return relevantMeditations.sorted(by: {$0.playCount! > $1.playCount!})
     }
 }
 
