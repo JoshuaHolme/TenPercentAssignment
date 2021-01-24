@@ -18,6 +18,7 @@ struct TopicDetailView: View {
                 Text("\(selectedTopic.description ?? "Description")")
                 ForEach(findSubtopics(topics: fetchedTopics.topics.topics!), id: \.uuid) {subtopic in
                     SubtopicView(subtopic: subtopic)
+                        .padding(.bottom, 40)
                 }
                 Spacer()
             }
