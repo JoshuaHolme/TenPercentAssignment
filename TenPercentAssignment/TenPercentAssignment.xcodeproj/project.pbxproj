@@ -109,7 +109,6 @@
 			children = (
 				69F8BB4C25BCC4250038E09F /* Model */,
 				69F8BB1E25BCC3B30038E09F /* TenPercentAssignmentApp.swift */,
-				69F8BB2025BCC3B30038E09F /* TopicsView.swift */,
 				69F8BB7025BCD5C10038E09F /* View */,
 				69F8BB2225BCC3B30038E09F /* Assets.xcassets */,
 				69F8BB2725BCC3B30038E09F /* Info.plist */,
@@ -159,6 +158,7 @@
 		69F8BB7025BCD5C10038E09F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69F8BB2025BCC3B30038E09F /* TopicsView.swift */,
 				69F8BB7125BCD5D60038E09F /* TopicCell.swift */,
 			);
 			path = View;

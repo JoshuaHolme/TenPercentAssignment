@@ -15,8 +15,7 @@ struct TopicCell: View {
                 .frame(minWidth: 6, maxWidth: 12, maxHeight: .infinity, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .foregroundColor(Color(UIColor(hex: topic.color ?? "#00000000") ?? UIColor.black))
             VStack (alignment: .leading, spacing: 8){
-//                Text(topic.title ?? "Featured")
-                Text("\(topic.uuid!)")
+                Text(topic.title ?? "Featured")
                     .font(.title)
                     .fontWeight(.bold)
                 Text(meditationCount())

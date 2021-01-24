@@ -36,7 +36,7 @@ struct TopicsView: View {
             debugInt+=1
         }
         
-        return unsortedTopics.topics!.sorted(by: {$0.position! < $1.position!})
+        return relevantTopics.sorted(by: {$0.position! < $1.position!})
     }
 }
 
